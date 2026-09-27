@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 2 - Flexbox & Grid</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TASK 0: NAVIGATION BAR (Flexbox) -->
+  <header class="navbar">
+    <div class="logo">Aibergen Amanzhol</div>
+    <ul class="nav-links">
+      <li><a href="#">Work</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- TASK 1: CARD ROW (Flexbox) -->
+  <section class="cards-section">
+    <h2>My projects</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="images/photo1.jpg" alt="project 1">
+        <h3>Web-Assigment1</h3>
+        <p>Первое задание по вёрстке, HTML и CSS.</p>
+        <a class="btn" href="https://github.com/aibergen74-create/Web-Assigment1" target="_blank">View</a>
+      </div>
+
+      <div class="card">
+        <img src="images/photo2.jpg" alt="project 2">
+        <h3>FinanceManager</h3>
+        <p>Финальный проект — менеджер личных финансов.</p>
+        <a class="btn" href="https://github.com/aibergen74-create/FinalProject_FinanceManager" target="_blank">View</a>
+      </div>
+
+      <div class="card">
+        <img src="images/photo3.jpg" alt="project 3">
+        <h3>ADS_Project</h3>
+        <p>Проект по алгоритмам и структурам данных.</p>
+        <a class="btn" href="https://github.com/aibergen74-create/ADS_Project" target="_blank">View</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TASK 2: PAGE LAYOUT WITH GRID AREAS -->
+  <div class="layout">
+    <header class="layout-header">Header</header>
+    <aside class="layout-sidebar">
+      <ul>
+        <li>Menu 1</li>
+        <li>Menu 2</li>
+        <li>Menu 3</li>
+      </ul>
+    </aside>
+    <main class="layout-main">
+      <h2>Main content</h2>
+      <p>Здесь основной контент страницы.</p>
+    </main>
+    <footer class="layout-footer">Footer</footer>
+  </div>
+
+  <!-- TASK 3: IMAGE GALLERY -->
+  <section class="gallery-section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="Gallery/photo-1.jpg" alt="photo 1">
+        <div class="caption">Photo 1</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Gallery/photo-2.jpg" alt="photo 2">
+        <div class="caption">Photo 2</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Gallery/photo-3.jpg" alt="photo 3">
+        <div class="caption">Photo 3</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Gallery/photo-4.jpg" alt="photo 4">
+        <div class="caption">Photo 4</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Gallery/photo-5.jpg" alt="photo 5">
+        <div class="caption">Photo 5</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Gallery/photo-6.jpg" alt="photo 6">
+        <div class="caption">Photo 6</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Gallery/photo-7.jpg" alt="photo 7">
+        <div class="caption">Photo 7</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Gallery/photo-8.jpg" alt="photo 8">
+        <div class="caption">Photo 8</div>
+      </div>
+      <div class="gallery-item">
+        <img src="Gallery/photo-9.jpg" alt="photo 9">
+        <div class="caption">Photo 9</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASK 4: PORTFOLIO PAGE (Flexbox + Grid combined) -->
+  <main class="main-grid">
+
+    <!-- левая колонка: проекты -->
+    <section class="projects">
+      <h2>Portfolio</h2>
+
+      <!-- каждая карточка внутри - Flexbox -->
+      <div class="project-card">
+        <img src="images/photo1.jpg" alt="project 1">
+        <div class="project-info">
+          <h3>Web-Assigment1</h3>
+          <p>Первое задание по вёрстке, HTML и CSS.</p>
+          <a class="btn" href="https://github.com/aibergen74-create/Web-Assigment1" target="_blank">View</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/photo2.jpg" alt="project 2">
+        <div class="project-info">
+          <h3>FinanceManager</h3>
+          <p>Финальный проект — менеджер личных финансов.</p>
+          <a class="btn" href="https://github.com/aibergen74-create/FinalProject_FinanceManager" target="_blank">View</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/photo3.jpg" alt="project 3">
+        <div class="project-info">
+          <h3>ADS_Project</h3>
+          <p>Проект по алгоритмам и структурам данных.</p>
+          <a class="btn" href="https://github.com/aibergen74-create/ADS_Project" target="_blank">View</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- правая колонка: инфо / sidebar -->
+    <aside class="sidebar">
+      <h3>About me</h3>
+      <p>I am a student studying frontend development. 
+        I am learning to build website layouts using Flexbox and Grid.</p>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS (Flexbox, Grid)</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <!-- FOOTER: во всю ширину страницы -->
+  <footer class="footer">
+    <p>&copy; 2026 Aibergen Amanzhol</p>
+  </footer>
+
+</body>
+</html>

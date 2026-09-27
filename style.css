@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* ===== TASK 0: NAVIGATION BAR (Flexbox) ===== */
+/* используется также как общий header для всей страницы */
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* лого слева, меню справа */
+  align-items: center;            /* выравнивание по вертикали (по центру) */
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;        /* расстояние между ссылками */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links a:hover {
+  color: #3457D5;
+}
+
+/* общий стиль кнопок (используется в Task 1 и Task 4) */
+.btn {
+  padding: 8px 16px;
+  background: #3457D5;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* ===== TASK 1: CARD ROW (Flexbox) ===== */
+
+.cards-section {
+  padding: 40px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;             /* расстояние между карточками */
+  align-items: stretch;  /* карточки одной высоты */
+}
+
+.card {
+  flex: 1;                 /* карточки одинаковой ширины */
+  display: flex;
+  flex-direction: column;  /* содержимое карточки идёт колонкой */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  background: #fff;
+}
+
+.card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* hover-эффект по заданию */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  flex: 1; /* текст растягивается, кнопка остаётся внизу у всех карточек */
+  color: #555;
+}
+
+/* ===== TASK 2: PAGE LAYOUT WITH GRID AREAS ===== */
+
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;   /* узкая колонка sidebar, широкая main */
+  grid-template-rows: 80px 1fr 60px;  /* header, средняя часть, footer */
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  min-height: 500px;
+  gap: 1px;
+  background: #ccc;
+}
+
+.layout-header {
+  grid-area: header;
+  background: #3457D5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-weight: bold;
+}
+
+.layout-sidebar {
+  grid-area: sidebar;
+  background: #f2f2f2;
+  padding: 15px;
+}
+
+.layout-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.layout-sidebar li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.layout-main {
+  grid-area: main;
+  background: #fff;
+  padding: 20px;
+}
+
+.layout-footer {
+  grid-area: footer;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== TASK 3: IMAGE GALLERY ===== */
+
+.gallery-section {
+  padding: 30px 40px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 равные колонки */
+  gap: 15px;
+}
+
+.gallery-item {
+  position: relative;   /* нужно, чтобы подпись легла поверх фото */
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* подпись спрятана по умолчанию */
+  transition: opacity 0.2s;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1; /* появляется при наведении */
+}
+
+/* ===== TASK 4: PORTFOLIO PAGE (Flexbox + Grid) ===== */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* левая колонка (проекты) шире правой (sidebar) */
+  gap: 30px;
+  padding: 30px 40px;
+}
+
+.projects h2 {
+  margin-top: 0;
+}
+
+.sidebar {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 6px;
+  height: fit-content;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  padding-left: 20px;
+}
+
+.project-card {
+  display: flex;           /* картинка и текст в ряд */
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.project-card img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;  /* заголовок, текст, кнопка - колонкой */
+  flex: 1;
+}
+
+.project-info p {
+  flex: 1;
+  color: #555;
+}
+
+.project-info .btn {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 700px) {
+  .navbar { flex-direction: column; gap: 10px; }
+  .cards { flex-direction: column; }
+
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 160px;
+  }
+}
