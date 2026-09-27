@@ -56,4 +56,4 @@ First I figured out flexbox - made the navbar and the cards. Then moved to grid,
 
 ## Repository
 
-GitHub: 
+GitHub: https://github.com/aibergen74-create/WEB_assignment2
