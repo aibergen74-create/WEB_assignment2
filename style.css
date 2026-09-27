@@ -4,13 +4,11 @@ body {
   color: #222;
 }
 
-/* ===== TASK 0: NAVIGATION BAR (Flexbox) ===== */
-/* используется также как общий header для всей страницы */
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* лого слева, меню справа */
-  align-items: center;            /* выравнивание по вертикали (по центру) */
+  justify-content: space-between; 
+  align-items: center;            
   padding: 20px 40px;
   border-bottom: 1px solid #ddd;
 }
@@ -22,7 +20,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 30px;        /* расстояние между ссылками */
+  gap: 30px;       
   list-style: none;
   margin: 0;
   padding: 0;
@@ -37,7 +35,6 @@ body {
   color: #3457D5;
 }
 
-/* общий стиль кнопок (используется в Task 1 и Task 4) */
 .btn {
   padding: 8px 16px;
   background: #3457D5;
@@ -48,7 +45,6 @@ body {
   display: inline-block;
 }
 
-/* ===== TASK 1: CARD ROW (Flexbox) ===== */
 
 .cards-section {
   padding: 40px;
@@ -56,14 +52,14 @@ body {
 
 .cards {
   display: flex;
-  gap: 20px;             /* расстояние между карточками */
-  align-items: stretch;  /* карточки одной высоты */
+  gap: 20px;             
+  align-items: stretch;  
 }
 
 .card {
-  flex: 1;                 /* карточки одинаковой ширины */
+  flex: 1;                  
   display: flex;
-  flex-direction: column;  /* содержимое карточки идёт колонкой */
+  flex-direction: column;   
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 15px;
@@ -71,7 +67,7 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* hover-эффект по заданию */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);  
 }
 
 .card img {
@@ -81,16 +77,14 @@ body {
 }
 
 .card p {
-  flex: 1; /* текст растягивается, кнопка остаётся внизу у всех карточек */
+  flex: 1;  
   color: #555;
 }
-
-/* ===== TASK 2: PAGE LAYOUT WITH GRID AREAS ===== */
-
+ 
 .layout {
   display: grid;
-  grid-template-columns: 200px 1fr;   /* узкая колонка sidebar, широкая main */
-  grid-template-rows: 80px 1fr 60px;  /* header, средняя часть, footer */
+  grid-template-columns: 200px 1fr;    
+  grid-template-rows: 80px 1fr 60px;   
   grid-template-areas:
     "header header"
     "sidebar main"
@@ -142,7 +136,7 @@ body {
   justify-content: center;
 }
 
-/* ===== TASK 3: IMAGE GALLERY ===== */
+ 
 
 .gallery-section {
   padding: 30px 40px;
@@ -150,12 +144,12 @@ body {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 равные колонки */
+  grid-template-columns: repeat(3, 1fr);  
   gap: 15px;
 }
 
 .gallery-item {
-  position: relative;   /* нужно, чтобы подпись легла поверх фото */
+  position: relative;    
   overflow: hidden;
   border-radius: 4px;
 }
@@ -173,19 +167,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* подпись спрятана по умолчанию */
+  opacity: 0;  
   transition: opacity 0.2s;
 }
 
 .gallery-item:hover .caption {
-  opacity: 1; /* появляется при наведении */
+  opacity: 1;  
 }
-
-/* ===== TASK 4: PORTFOLIO PAGE (Flexbox + Grid) ===== */
-
+ 
 .main-grid {
   display: grid;
-  grid-template-columns: 3fr 1fr; /* левая колонка (проекты) шире правой (sidebar) */
+  grid-template-columns: 3fr 1fr;  
   gap: 30px;
   padding: 30px 40px;
 }
@@ -210,7 +202,7 @@ body {
 }
 
 .project-card {
-  display: flex;           /* картинка и текст в ряд */
+  display: flex;            
   gap: 20px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -227,7 +219,7 @@ body {
 
 .project-info {
   display: flex;
-  flex-direction: column;  /* заголовок, текст, кнопка - колонкой */
+  flex-direction: column;  
   flex: 1;
 }
 
@@ -247,8 +239,6 @@ body {
   text-align: center;
   padding: 15px;
 }
-
-/* ===== RESPONSIVE ===== */
 
 @media (max-width: 700px) {
   .navbar { flex-direction: column; gap: 10px; }
